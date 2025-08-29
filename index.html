@@ -593,19 +593,31 @@
         const resultSheet = document.getElementById('result-sheet');
         
         // Provided Google Drive file links
-        const fileUrl3 = 'https://drive.google.com/file/d/1NQLJrl53l83Zi_3mqXz1QMRx87Zhv9DH/view?usp=sharing';
-        const fileUrl4 = 'https://drive.google.com/file/d/1fnlFedotIfeOtfCBVIgAwejOSJOUSbcx/view?usp=sharing';
+        const fileUrl3 = 'https://www.notion.so/songtanadot/LT-143122e8542780ed8fdde1f4dc0b9124?source=copy_link#15a122e8542780e78bd6df74d0cbc0f2';
+        const fileUrl4 = 'https://www.notion.so/songtanadot/LT-143122e8542780ed8fdde1f4dc0b9124?source=copy_link#15a122e8542780d5a848dbe3a3fb810f';
 
         // ---!!! 중요 !!!---
         // 아래 'YOUR_GITHUB_IMAGE_URL_X'를 GitHub의 Raw 이미지 링크로 교체해주세요.
         // 예: https://raw.githubusercontent.com/USERNAME/REPO/main/path/to/image.png
       const imageUrl1 = 'https://raw.githubusercontent.com/adotsongtan/Registration-and-Level-Test/main/highschool.png';
-const imageUrl2 = 'https://raw.githubusercontent.com/adotsongtan/Registration-and-Level-Test/main/middleschool.png';
+      const imageUrl2 = 'https://raw.githubusercontent.com/adotsongtan/Registration-and-Level-Test/main/middleschool.png';
 
         resultSheet.innerHTML = `
             <div class="reference-container">
                 <h2>참고 자료</h2>
-                
+                <div class="reference-item">
+                    <h3>내신형 레벨테스트</h3>
+                    <div class="reference-actions">
+                        <button type="button" onclick="openPopup('${fileUrl3}')">노션 이동</button>
+                    </div>
+                </div>
+
+                <div class="reference-item">
+                    <h3>중등 레벨테스트</h3>
+                    <div class="reference-actions">
+                        <button type="button" onclick="openPopup('${fileUrl4}')">노션 이동</button>
+                    </div>
+                    
                 <div class="reference-item">
                     <h3>고등 학부모님 전달</h3>
                     <img id="ref-img-1" src="${imageUrl1}" class="reference-image" alt="고등부 자료" crossorigin="anonymous" onerror="this.style.display='none'">
@@ -622,18 +634,6 @@ const imageUrl2 = 'https://raw.githubusercontent.com/adotsongtan/Registration-an
                     </div>
                 </div>
 
-                <div class="reference-item">
-                    <h3>내신형 레벨테스트</h3>
-                    <div class="reference-actions">
-                        <button type="button" onclick="openPopup('${fileUrl3}')">파일 열기</button>
-                    </div>
-                </div>
-
-                <div class="reference-item">
-                    <h3>중등 레벨테스트</h3>
-                    <div class="reference-actions">
-                        <button type="button" onclick="openPopup('${fileUrl4}')">파일 열기</button>
-                    </div>
                 </div>
 
             </div>
@@ -869,5 +869,6 @@ const imageUrl2 = 'https://raw.githubusercontent.com/adotsongtan/Registration-an
 </body>
 
 </html>
+
 
 
