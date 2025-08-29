@@ -583,9 +583,9 @@
         return totalData.find(item => score >= item.min && score <= item.max) || { level: 'N/A', text: '점수 범위 총평 없음.' };
     }
 
-    // --- NEW FUNCTION: Open link in a popup window ---
+    // --- FUNCTION: Open link in a new tab ---
     function openPopup(url) {
-        window.open(url, 'new_window', 'width=800,height=700,scrollbars=yes,resizable=yes');
+        window.open(url, '_blank');
     }
 
     // --- UPDATED FUNCTION: Show file links and copyable images from GitHub ---
@@ -603,21 +603,10 @@
       const imageUrl2 = 'https://raw.githubusercontent.com/adotsongtan/Registration-and-Level-Test/main/middleschool.png';
 
         resultSheet.innerHTML = `
+            resultSheet.innerHTML = `
             <div class="reference-container">
                 <h2>참고 자료</h2>
-                <div class="reference-item">
-                    <h3>내신형 레벨테스트</h3>
-                    <div class="reference-actions">
-                        <button type="button" onclick="openPopup('${fileUrl3}')">노션 이동</button>
-                    </div>
-                </div>
-
-                <div class="reference-item">
-                    <h3>중등 레벨테스트</h3>
-                    <div class="reference-actions">
-                        <button type="button" onclick="openPopup('${fileUrl4}')">노션 이동</button>
-                    </div>
-                    
+                
                 <div class="reference-item">
                     <h3>고등 학부모님 전달</h3>
                     <img id="ref-img-1" src="${imageUrl1}" class="reference-image" alt="고등부 자료" crossorigin="anonymous" onerror="this.style.display='none'">
@@ -634,11 +623,23 @@
                     </div>
                 </div>
 
+                <div class="reference-item">
+                    <h3>내신형 레벨테스트</h3>
+                    <div class="reference-actions">
+                        <button type="button" onclick="openPopup('${fileUrl3}')">파일 열기</button>
+                    </div>
+                </div>
+
+                <div class="reference-item">
+                    <h3>중등 레벨테스트</h3>
+                    <div class="reference-actions">
+                        <button type="button" onclick="openPopup('${fileUrl4}')">파일 열기</button>
+                    </div>
                 </div>
 
             </div>
         `;
-    }
+    
 
     // --- RE-ADDED FUNCTION: Copy image to clipboard ---
     async function copyImageToClipboard(imageId) {
@@ -869,6 +870,7 @@
 </body>
 
 </html>
+
 
 
 
